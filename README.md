@@ -81,18 +81,18 @@ By reframing market analysis as a **multi-agent statistical validation pipeline*
 │  └─ Ticker (e.g. RELIANCE.NS) + 20-Day OHLCV via yFinance       │
 │                          │                                      │
 │                          ▼                                      │
-│  🧮 STATISTICAL ENGINE                                         │
+│  🧮 STATISTICAL ENGINE                                          │
 │  └─ Compute μ, σ, and Volume Z-Score                            │
 │                          │                                      │
 │                          ▼                                      │
-│  🕵️ AGENT 1: Lead Quant Researcher                              │
+│  🕵️ AGENT 1: Lead Quant Researcher                              |
 │  └─ Applies Z-Score gating. Flags signal or noise.              │
 │                          │                                      │
 │                          ▼                                      │
-│  📈 AGENT 2: Indian Market Strategist                          │
+│  📈 AGENT 2: Indian Market Strategist                           │
 │  └─ Translates quant signal into NSE/BSE execution plan         │
 │                          │                                      │
-│                          ▼                                       │
+│                          ▼                                      │
 │  📤 OUTPUT                                                      │
 │  └─ Validated Action: BUY / WATCH / AVOID + Rationale           │
 └─────────────────────────────────────────────────────────────────┘
