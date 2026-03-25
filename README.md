@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=|$|ians%20NEXUS&fontSize=80" width="100%" />
+  <img src="![|$|ians NEXUS](https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=%7C%24%7Cians%20NEXUS&fontSize=80)" />
 
   ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
   ![CrewAI](https://img.shields.io/badge/Framework-CrewAI-red.svg)
