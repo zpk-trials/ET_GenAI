@@ -1,91 +1,212 @@
 <div align="center">
-  <img src="![|$|ians NEXUS](https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=%7C%24%7Cians%20NEXUS&fontSize=80)" />
 
-  ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
-  ![CrewAI](https://img.shields.io/badge/Framework-CrewAI-red.svg)
-  ![Groq](https://img.shields.io/badge/Inference-Groq_LPU-orange.svg)
-  ![ISI](https://img.shields.io/badge/Institute-ISI_Bangalore-green.svg)
+<!-- Animated Header Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&height=280&color=gradient&customColorList=0,2,2,5,30&text=%7c%24%7cians&fontColor=00ffa8&fontSize=80&stroke=ea00d9&strokeWidth=2&animation=fadeIn&fontAlignY=38&desc=Agentic%20Opportunity%20Radar&descAlignY=58&descSize=20&descColor=ffffff" width="100%"/>
 
-  <h3>🚀 NEXUS: Agentic Opportunity Radar</h3>
-  <p><em>Institutional-Grade Statistical Validation for Retail Investors</em></p>
+<!-- Badges Row 1 -->
+<p>
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CrewAI-Orchestration-FF4B4B?style=for-the-badge&logo=robot&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Groq-LPU%20Inference-FF6B00?style=for-the-badge&logo=lightning&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Llama_3.3-70B-blueviolet?style=for-the-badge&logo=meta&logoColor=white"/>
+</p>
+
+<!-- Badges Row 2 -->
+<p>
+  <img src="https://img.shields.io/badge/yFinance-Data%20Layer-00897B?style=for-the-badge&logo=yahoo&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NSE%20%7C%20BSE-Indian%20Markets-FF9800?style=for-the-badge&logo=chart-line&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ISI-Bangalore-1565C0?style=for-the-badge&logo=graduation-cap&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ET%20GenAI%20Hackathon-2026-00ffa8?style=for-the-badge&logo=trophy&logoColor=black"/>
+</p>
+
+<br/>
+
+```
+███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗
+████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝
+██╔██╗ ██║█████╗   ╚███╔╝ ██║   ██║███████╗
+██║╚██╗██║██╔══╝   ██╔██╗ ██║   ██║╚════██║
+██║ ╚████║███████╗██╔╝ ██╗╚██████╔╝███████║
+╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+        Agentic Opportunity Radar v1.0
+```
+
+### *Institutional-Grade Statistical Validation for Retail Investors*
+
+<br/>
+
+> **"The market rewards those who see the signal through the noise."**
+> 
+> NEXUS is a multi-agent AI pipeline that validates stock breakouts using Z-Score volume analysis — putting the quant desk's edge in the hands of every retail trader.
+
 </div>
 
-> **The Mission:** Democratizing Investment Intelligence by verifying whether a stock price breakout is backed by true institutional volume, protecting retail traders from the dreaded "Bull Trap."
+---
+
+## 📌 Table of Contents
+
+- [The Problem We Solve](#-the-problem-we-solve)
+- [How NEXUS Works](#-how-nexus-works)
+- [The Math Behind the Magic](#-the-math-behind-the-magic)
+- [Multi-Agent Architecture](#-multi-agent-architecture)
+- [Tech Stack](#%EF%B8%8F-tech-stack)
+- [Quick Start](#-quick-start)
+- [Sample Output](#-sample-output)
+- [Team](#-team-ians)
 
 ---
 
-## 🎯 Problem Statement
+## 🎯 The Problem We Solve
 
-Retail investors often rely on lagging indicators or "noisy" price action, entering trades at the peak only to watch the momentum instantly reverse. This information asymmetry exists because institutional players use quantitative volume analysis, while retail relies on rumors.
+```
+[ Retail Trader ] ──→ Sees price breakout ──→ Buys in excitement ──→ 📉 Bull Trap
+[ Institutional ] ──→ Sees volume Z-Score ──→ Validates conviction ──→ 📈 Wins
+```
 
-**NEXUS** solves this by reframing market analysis as a **multi-agent statistical validation pipeline**.
+Retail investors bleed not from lack of information — but from **information asymmetry**. Institutional desks run proprietary volume models that detect whether a price spike is backed by real conviction or is just a low-liquidity fake-out designed to shake out weak hands.
 
-### The Input
-- Target Ticker Symbol (e.g., `RELIANCE.NS`)
-- Live 20-day OHLCV Data (via yFinance)
+**NEXUS bridges that gap.**
 
-### The Output
-- **Statistically Validated Action:** `BUY`, `WATCH`, or `AVOID`
-- **Agentic Rationale:** A human-readable breakdown of the underlying math and market narrative.
-
----
-
-## 🧠 Core Methodology (The Math)
-
-We discard standard volume bars in favor of **Volume Z-Score Analysis**. This acts as the unshakeable guardrail for our AI agents.
-
-1. **Data Ingestion:** Fetch 20 days of historical volume.
-2. **Statistical Modeling:** Calculate the rolling mean ($\mu$) and standard deviation ($\sigma$).
-3. **Z-Score Calculation:** We measure how many standard deviations today's volume is from the average.
-   
-   $$Z = \\frac{{V_{{today}} - \\mu_{{20day}}}}{{\\sigma_{{20day}}}}$$
-
-   * `Z > 2.0` → Top 2.5% volume day (**High Institutional Conviction**).
-   * `Z < 0` → Below average volume (**High Risk / Noise**).
+By reframing market analysis as a **multi-agent statistical validation pipeline**, we give any retail trader access to the same z-score guardrails that quant funds rely on — free, open, and running in seconds.
 
 ---
 
-## 🤖 Architecture: The Multi-Agent Crew
+## ⚙️ How NEXUS Works
 
-Powered by **Llama 3.3 70B** running on **Groq** for sub-second inference, our pipeline utilizes two distinct AI personas:
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        NEXUS PIPELINE                           │
+│                                                                 │
+│  📥 INPUT                                                       │
+│  └─ Ticker (e.g. RELIANCE.NS) + 20-Day OHLCV via yFinance       │
+│                          │                                      │
+│                          ▼                                      │
+│  🧮 STATISTICAL ENGINE                                         │
+│  └─ Compute μ, σ, and Volume Z-Score                            │
+│                          │                                      │
+│                          ▼                                      │
+│  🕵️ AGENT 1: Lead Quant Researcher                              │
+│  └─ Applies Z-Score gating. Flags signal or noise.              │
+│                          │                                      │
+│                          ▼                                      │
+│  📈 AGENT 2: Indian Market Strategist                          │
+│  └─ Translates quant signal into NSE/BSE execution plan         │
+│                          │                                      │
+│                          ▼                                       │
+│  📤 OUTPUT                                                      │
+│  └─ Validated Action: BUY / WATCH / AVOID + Rationale           │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-<details>
-  <summary style="list-style: none; cursor: pointer;">
-    <b>🕵️‍♂️ Agent 1: The Lead Quant Researcher (Click to expand)</b>
-  </summary>
-  <p>This agent acts as the strict logical gatekeeper. It does not care about news; it only cares about the Z-Score and price momentum. If the math doesn't show a high-conviction breakout, this agent flags the asset as "Noisy."</p>
-</details>
+---
 
-<details>
-  <summary style="list-style: none; cursor: pointer;">
-    <b>📈 Agent 2: The Indian Market Strategist (Click to expand)</b>
-  </summary>
-  <p>Takes the raw quantitative report from the Lead Quant and translates it into a risk-mitigated execution plan tailored for the volatile realities of the NSE/BSE markets.</p>
-</details>
+## 🧠 The Math Behind the Magic
+
+Traditional volume bars are noisy and context-free. NEXUS replaces them with **Volume Z-Score Analysis** — a rigorous statistical framework that answers one question: *Is today's volume genuinely unusual?*
+
+### Step 1 — Historical Baseline
+
+We establish the 20-day rolling statistics:
+
+$$\mu_{20} = \frac{1}{20}\sum_{i=1}^{20} V_i \qquad \sigma_{20} = \sqrt{\frac{1}{20}\sum_{i=1}^{20}(V_i - \mu_{20})^2}$$
+
+### Step 2 — Z-Score Signal
+
+$$\boxed{Z = \frac{V_{\text{today}} - \mu_{20}}{\sigma_{20}}}$$
+
+### Step 3 — Signal Interpretation
+
+| Z-Score Range | Percentile | Signal | Action |
+|:---:|:---:|:---|:---:|
+| `Z > 2.0` | Top 2.5% | 🟢 High Institutional Conviction | **BUY** |
+| `0 < Z ≤ 2.0` | Above Average | 🟡 Moderate Activity  | **WATCH** |
+| `Z ≤ 0` | Below Average | 🔴 Low Conviction / Noise | **AVOID** |
+
+> **Why Z-Score?** It normalizes volume across different market caps, sectors, and trading sessions — eliminating the raw-number bias that misleads most retail tools.
+
+---
+
+## 🤖 Multi-Agent Architecture
+
+Powered by **Llama 3.3 70B** on **Groq's LPU** for sub-second inference, NEXUS runs two specialized AI agents in a sequential crew:
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🕵️‍♂️ Agent 1
+## Lead Quant Researcher
+
+**Persona:** Cold. Mathematical. Unforgiving.
+
+**Mandate:** Acts as the strict logical gatekeeper. Zero tolerance for narratives — only the Z-Score verdict matters.
+
+**Core Logic:**
+- Ingests raw OHLCV data
+- Computes the volume Z-Score
+- Classifies signal as **High Conviction**, **Moderate**, or **Noise**
+- Outputs a structured quant report
+
+**Guardrail:** If `Z < 2.0`, the asset is flagged as *"Insufficient Institutional Participation"* regardless of price action.
+
+</td>
+<td width="50%" valign="top">
+
+### 📈 Agent 2
+## Indian Market Strategist
+
+**Persona:** Seasoned. Pragmatic. Risk-aware.
+
+**Mandate:** Takes the quant report and translates it into a risk-mitigated execution strategy tuned to the volatile realities of NSE/BSE microstructure.
+
+**Core Logic:**
+- Reads Agent 1's conviction rating
+- Factors in circuit limits, F&O expiry, and India VIX context
+- Defines entry zones, stop-loss levels, and position sizing logic
+- Delivers the final **BUY / WATCH / AVOID** verdict
+
+**Guardrail:** Never overrides a `AVOID` signal from Agent 1.
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Orchestration:** CrewAI
-- **LLM Engine:** Groq (Llama-3.3-70b-versatile)
-- **Data Layer:** yFinance, Pandas, NumPy
-- **Environment:** Python 3.11+
+| Layer | Technology | Purpose |
+|:---|:---|:---|
+| 🧠 **LLM Engine** | Groq + Llama 3.3 70B | Sub-second inference for agent reasoning |
+| 🤖 **Orchestration** | CrewAI | Multi-agent task delegation and pipeline control |
+| 📊 **Data Layer** | yFinance + Pandas + NumPy | Live OHLCV ingestion and statistical computation |
+| 🐍 **Runtime** | Python 3.11+ | Core execution environment |
+| 🌐 **Markets** | NSE / BSE (India) | Target exchange universe |
 
 ---
 
-## ▶️ Quick Start Guide
+## ▶️ Quick Start
 
-**1. Clone the repository**
+### Prerequisites
+
+- Python 3.11+
+- A [Groq API key](https://console.groq.com) (free tier works)
+
+### Installation
+
+**1. Clone the repo**
 ```bash
 git clone https://github.com/Zapking-001/NEXUS_Opportunity_Radar.git
 cd NEXUS_Opportunity_Radar
 ```
 
-**2. Initialize the environment**
+**2. Create and activate virtual environment**
 ```bash
-python -m venv venv
-source venv/Scripts/activate  # On Windows Git Bash
+# Linux / macOS
+python -m venv venv && source venv/bin/activate
+
+# Windows (Git Bash)
+python -m venv venv && source venv/Scripts/activate
 ```
 
 **3. Install dependencies**
@@ -93,39 +214,110 @@ source venv/Scripts/activate  # On Windows Git Bash
 pip install -r requirements.txt
 ```
 
-**4. Launch the Radar**
+**4. Set your API key**
+```bash
+# Linux / macOS
+export GROQ_API_KEY="your_key_here"
+
+# Windows (PowerShell)
+$env:GROQ_API_KEY="your_key_here"
+```
+
+**5. Launch NEXUS**
 ```bash
 python main.py
 ```
 
+When prompted, enter any NSE/BSE ticker:
+```
+> Enter ticker symbol: RELIANCE.NS
+```
+
 ---
 
-## 🏁 Submission Details
+## 📊 Sample Output
 
-**Track:** Democratizing Investment Intelligence  
-**Event:** ET GenAI Hackathon 2026
-
-```text
-  _   _ _______  ___    _  _____ 
- | \ | |  ___\ \/ / |  | |/ ____|
- |  \| | |__  \  /| |  | | (___  
- | . ` |  __| /  \| |  | |\___ \ 
- | |\  | |___/ /\ \ |__| |____) |
- |_| \_|____/_/  \_\____/|_____/ 
-                                 
 ```
-<br>
+═══════════════════════════════════════════════════════
+                  NEXUS — ANALYSIS REPORT
+             Ticker: RELIANCE.NS  |  Date: 2026-03-25
+═══════════════════════════════════════════════════════
 
-**| The Team |$|ians |**
-| Name | Role |
-|-----|-----|
-| **Pritham Prajwin V** | Lead Quant Logic, Systems Architecture, Technical Documentation & Product Strategy |
-| **Garg Parashar** | CrewAI Orchestration & LLM Prompt Engineering |
-| **Saurav Kumar** | Data Pipeline (yFinance) & Dependency Management |
+[QUANT LAYER]
+  20-Day Avg Volume  : 8,42,31,500
+  Today's Volume     : 2,10,84,75,000
+  Z-Score            : 3.47  ✅ ABOVE THRESHOLD
+
+[STRATEGY LAYER]
+  Signal             : HIGH INSTITUTIONAL CONVICTION
+  Recommendation     : ██████████ BUY
+  Entry Zone         : ₹1,412 – ₹1,428
+  Stop Loss          : ₹1,389 (below 20D VWAP)
+  Target             : ₹1,490 (R:R = 1:2.4)
+
+[RATIONALE]
+  Volume 3.47 standard deviations above the 20-day mean
+  places today in the top 0.3% of trading days. Price 
+  broke resistance on institutional-grade participation.
+  NSE circuit limits are non-binding. Entry is validated.
+
+═══════════════════════════════════════════════════════
+  Verdict: BUY  |  Confidence: HIGH  |  Risk: MODERATE
+═══════════════════════════════════════════════════════
+```
+
+---
+
+## 👥 Team |$|ians
+
+<table align="center">
+<tr>
+  <th>Name</th>
+  <th>Role</th>
+  <th>Responsibilities</th>
+</tr>
+<tr>
+  <td><b>Garg Parashar</b></td>
+  <td>🧠 AI Orchestration Lead</td>
+  <td>CrewAI pipeline design, LLM prompt engineering, agent persona tuning</td>
+</tr>
+</tr>
+<tr>
+  <td><b>Saurav Kumar</b></td>
+  <td>⚙️ Data Engineer</td>
+  <td>yFinance data pipeline, OHLCV processing, dependency management & quant logic</td>
+</tr>
+<tr>
+  <td><b>Pritham Prajwin</b></td>
+  <td>📐 Systems Architect</td>
+  <td>Lead Z-Score framework, system architecture, technical docs & product strategy</td>
+</table>
+
+---
+
+## ⚠️ Disclaimer
+
+> NEXUS is a **research and educational tool** built for the ET GenAI Hackathon 2026. It does not constitute financial advice. All trading decisions involve risk. Past statistical patterns do not guarantee future returns. Always consult a SEBI-registered financial advisor before investing.
+
+---
+
+## 🏆 Submission Details
+
+```
+Track   : Democratizing Investment Intelligence
+Event   : ET GenAI Hackathon 2026
+Team    : |$|ians
+Institute: ISI Bangalore
+```
 
 ---
 
 <div align="center">
-  <img src="https://forthebadge.com/images/featured/featured-built-with-love.svg" height="25">
-  <img src="https://forthebadge.com/images/featured/featured-cyber-punk.svg" height="25">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&color=gradient&customColorList=0,2,2,5,30&section=footer&reversal=false"/>
+
+*Built with `Groq` and `GitHub` by Team |$|ians at ISI Bangalore*
+
+**[⭐ Star this repo](https://github.com/Zapking-001/NEXUS_Opportunity_Radar) if NEXUS helped you see through the noise.**
+
 </div>
