@@ -1,5 +1,12 @@
 <div align="center">
-  <h1>🚀 NEXUS: Agentic Opportunity Radar</h1>
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=|$|ians%20NEXUS&fontSize=80" width="100%" />
+
+  ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
+  ![CrewAI](https://img.shields.io/badge/Framework-CrewAI-red.svg)
+  ![Groq](https://img.shields.io/badge/Inference-Groq_LPU-orange.svg)
+  ![ISI](https://img.shields.io/badge/Institute-ISI_Bangalore-green.svg)
+
+  <h3>🚀 NEXUS: Agentic Opportunity Radar</h3>
   <p><em>Institutional-Grade Statistical Validation for Retail Investors</em></p>
 </div>
 
@@ -28,11 +35,13 @@ Retail investors often rely on lagging indicators or "noisy" price action, enter
 We discard standard volume bars in favor of **Volume Z-Score Analysis**. This acts as the unshakeable guardrail for our AI agents.
 
 1. **Data Ingestion:** Fetch 20 days of historical volume.
-2. **Statistical Modeling:** Calculate the rolling mean and standard deviation.
+2. **Statistical Modeling:** Calculate the rolling mean ($\mu$) and standard deviation ($\sigma$).
 3. **Z-Score Calculation:** We measure how many standard deviations today's volume is from the average.
-   * `Z > 2.0` → Top 2.5% volume day (High Institutional Conviction).
-   * `Z < 0` → Below average volume (High Risk / Noise).
-4. **Agentic Handoff:** The raw statistics are passed to our CrewAI orchestrator for narrative synthesis.
+   
+   $$Z = \\frac{{V_{{today}} - \\mu_{{20day}}}}{{\\sigma_{{20day}}}}$$
+
+   * `Z > 2.0` → Top 2.5% volume day (**High Institutional Conviction**).
+   * `Z < 0` → Below average volume (**High Risk / Noise**).
 
 ---
 
@@ -84,13 +93,7 @@ source venv/Scripts/activate  # On Windows Git Bash
 pip install -r requirements.txt
 ```
 
-**4. Configure Keys**
-Create a `.env` file in the root directory and add your Groq API key:
-```text
-GROQ_API_KEY=your_key_here
-```
-
-**5. Launch the Radar**
+**4. Launch the Radar**
 ```bash
 python main.py
 ```
@@ -116,6 +119,13 @@ python main.py
 **| The Team |$|ians |**
 | Name | Role |
 |-----|-----|
-| **Saurav Kumar** | Data Pipeline (yFinance) & Dependency Management |
+| **Pritham Prajwin V** | Lead Quant Logic, Systems Architecture, Technical Documentation & Product Strategy |
 | **Garg Parashar** | CrewAI Orchestration & LLM Prompt Engineering |
-| **Pritham Prajwin V** | Lead Quant Logic , Systems Architecture , Technical Documentation & Product Strategy |
+| **Saurav Kumar** | Data Pipeline (yFinance) & Dependency Management |
+
+---
+
+<div align="center">
+  <img src="https://forthebadge.com/images/featured/featured-built-with-love.svg" height="25">
+  <img src="https://forthebadge.com/images/featured/featured-cyber-punk.svg" height="25">
+</div>
