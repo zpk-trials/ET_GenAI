@@ -236,36 +236,67 @@ When prompted, enter any NSE/BSE ticker:
 ---
 
 ## 📊 Sample Output
-
+ 
 ```
-═══════════════════════════════════════════════════════
-                  NEXUS — ANALYSIS REPORT
-             Ticker: RELIANCE.NS  |  Date: 2026-03-25
-═══════════════════════════════════════════════════════
-
-[QUANT LAYER]
-  20-Day Avg Volume  : 8,42,31,500
-  Today's Volume     : 2,10,84,75,000
-  Z-Score            : 3.47  ✅ ABOVE THRESHOLD
-
-[STRATEGY LAYER]
-  Signal             : HIGH INSTITUTIONAL CONVICTION
-  Recommendation     : ██████████ BUY
-  Entry Zone         : ₹1,412 – ₹1,428
-  Stop Loss          : ₹1,389 (below 20D VWAP)
-  Target             : ₹1,490 (R:R = 1:2.4)
-
-[RATIONALE]
-  Volume 3.47 standard deviations above the 20-day mean
-  places today in the top 0.3% of trading days. Price 
-  broke resistance on institutional-grade participation.
-  NSE circuit limits are non-binding. Entry is validated.
-
-═══════════════════════════════════════════════════════
-  Verdict: BUY  |  Confidence: HIGH  |  Risk: MODERATE
-═══════════════════════════════════════════════════════
+[SYSTEM] Scanning RELIANCE.NS for anomalies...
+[NEXUS] AI Agents are analyzing RELIANCE...
+ 
+╭────────────────────────────────────────────────── 🤖 Agent Started ──────────────────────────────────────────────────╮
+│                                                                                                                      │
+│  Agent: Lead Quant Researcher                                                                                        │
+│                                                                                                                      │
+│  Task: Analyze the following metrics for RELIANCE: {'ticker': 'RELIANCE', 'price': np.float64(1415.2), 'sma_20':     │
+│  np.float64(1397.21), 'vol_zscore': np.float64(-1.83), 'status': 'Normal Activity', 'trend': 'Bullish'}.             │
+│      Evaluate the Volume Z-Score ($Z = (V_t - \mu)/\sigma$).                                                         │
+│      If Z > 2.0, determine if the Bullish trend is sustainable.                                                      │
+│                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ 
+╭─────────────────────────────────────────────── ✅ Agent Final Answer ────────────────────────────────────────────────╮
+│                                                                                                                       │
+│  Agent: Lead Quant Researcher                                                                                         │
+│                                                                                                                       │
+│  Final Answer:                                                                                                        │
+│  The Volume Z-Score for RELIANCE is -1.83, indicating that the current volume is 1.83 standard deviations below       │
+│  the mean. This does not meet the Z > 2.0 threshold for high institutional conviction. While the price at 1415.2      │
+│  is above the SMA_20 of 1397.21 (Bullish), the low volume participation suggests the trend lacks strong market        │
+│  conviction and may not be sustainable based solely on volume analysis.                                               │
+│                                                                                                                       │
+│  Recommendation: Monitor volume and other technical indicators for signs of increasing market participation           │
+│  to support the continuation of the Bullish trend.                                                                    │
+│                                                                                                                       │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ 
+╭────────────────────────────────────────────────── 🤖 Agent Started ──────────────────────────────────────────────────╮
+│                                                                                                                      │
+│  Agent: Indian Market Strategist                                                                                     │
+│                                                                                                                      │
+│  Task: Based on the Lead Quant's assessment, provide a 2-sentence 'Action                                            │
+│      Recommendation' for an Indian retail investor. Be direct: Watch, Wait, or Buy.                                  │
+│                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ 
+╭─────────────────────────────────────────────── ✅ Agent Final Answer ────────────────────────────────────────────────╮
+│                                                                                                                      │
+│  Agent: Indian Market Strategist                                                                                     │
+│                                                                                                                      │
+│  Final Answer:                                                                                                       │
+│  Wait for RELIANCE to demonstrate higher volume participation, as indicated by a Volume Z-Score greater than 2.0,    │
+│  to confirm the sustainability of the current Bullish trend before considering a buy position. This cautious         │
+│  approach allows investors to monitor the stock's behavior and potentially avoid entering a position that lacks      │
+│  broad market conviction, thereby managing their risk more effectively.                                              │
+│                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ 
+================================================================
+                FINAL OPPORTUNITY RADAR REPORT
+================================================================
+Wait for RELIANCE to demonstrate higher volume participation,
+as indicated by a Volume Z-Score greater than 2.0, to confirm
+the sustainability of the current Bullish trend before
+considering a buy position.
+================================================================
 ```
-
 ---
 
 ## 👥 Team |$|ians
